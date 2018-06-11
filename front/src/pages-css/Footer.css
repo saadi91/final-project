@@ -1,0 +1,21 @@
+
+.footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    align-items: center;
+    justify-items: center;
+    height: 100px;
+    background: rgb(38, 63, 60);
+  }
+
+  .copy-right {
+    display: grid;
+    color: #f8f9fa;
+  }
+
+  .social-media-icons {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: auto auto auto;
+  }

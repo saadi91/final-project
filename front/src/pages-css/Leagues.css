@@ -1,0 +1,57 @@
+
+.select-league {
+  margin: 40px;
+}
+.all-leagues {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(10, 1fr);    
+    grid-template-rows: auto;
+    justify-items: center;
+    margin-left: 50px;
+    height: 200px;
+  }
+
+.league {
+    display: grid;
+}
+
+.league a {
+    text-decoration: none;
+    color: #144f50;
+}
+    
+.league-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.schedule-league {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.schedule-league h3 {
+    color: #144f50;    
+    margin-bottom: 30px;
+}
+
+@media (max-width: 800px){
+    .all-leagues {
+    grid-template-columns: repeat(4, 1fr);    
+}
+}
+@media (max-width: 650px){
+    .all-leagues {
+    grid-template-columns: repeat(3, 1fr);    
+}
+}
+@media (max-width: 480px){
+    .all-leagues {
+    grid-template-columns: repeat(2, 1fr);    
+}
+}
+@media (max-width: 350px){
+    .all-leagues {
+    grid-template-columns: repeat(1, 2fr);    
+}
+}

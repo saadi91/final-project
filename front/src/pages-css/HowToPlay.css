@@ -1,0 +1,28 @@
+.wrapper {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: center;
+    margin-bottom: 50px;
+    height: 400px;
+}
+.details {
+display: grid;
+grid-column: 2 / span 6;
+padding-top: 50px;
+font-size: 20px;
+line-height: 30px;
+color: #1d1b1b;
+
+}
+
+@media (max-width:650px){
+    .wrapper {
+        height: 500px;
+    }
+}
+@media (max-width:550px){
+    .wrapper {
+        height: 550px;
+    }
+}

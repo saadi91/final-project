@@ -1,0 +1,28 @@
+
+
+.result-table {
+    position: relative;
+    bottom: 180px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    width: 290px;
+    height: 250px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr{
+    background-color: #EFEFEF;
+}
+@media (max-width: 500px) {
+
+}

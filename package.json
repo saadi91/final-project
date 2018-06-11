@@ -1,0 +1,23 @@
+{
+  "name": "codi-final-project-omar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "cd front && npm start",
+    "start": "concurrently --kill-others-on-fail --names \"server client\" \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.33",
+    "nba": "^4.2.2",
+    "nodemon": "^1.17.5"
+  }
+}

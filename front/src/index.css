@@ -1,0 +1,47 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+		background-color:#F4F7F6;
+    color: rgb(34, 25, 25);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+.social-media-icons img {
+  display: grid;
+  width: 50px;
+}
+
+@media (max-width: 900px) {
+ 
+  .login .form-group {
+    margin: 0px;
+  }
+
+}
+@media (max-width: 700px) {
+ 
+  header {
+    height: 250px;
+  }
+  .login .form-group {
+    clear: both;
+    margin: 0px;
+  }
+ .login .form-control {
+    width: 90%;
+ }
+ 
+}
