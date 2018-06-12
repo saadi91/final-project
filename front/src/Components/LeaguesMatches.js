@@ -198,14 +198,11 @@ const VoteOut = ({ team1, team2, onClick }) =>
  
         <div>
         <div className="matches">
-          {/* { leagues.slice(0,3).map(league =>
-              <LeagueWithMatches {...league} onVote={this.voteUserIn}/>
-            )
-          } */}
+         
           {this.renderLeagues()}
 
         </div>
-        <div className="vote-modal">
+      <div className="vote-modal">
         <Modal show={this.state.isVote} onHide={this.voteUserOut}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>

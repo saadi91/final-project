@@ -14,7 +14,7 @@ class Result extends Component {
 
   componentDidMount() {
     console.log("test")
-    axios.get('http://localhost:8888/')
+    axios.get('http://localhost:4055/')
       .then(response => {
         const users = response.data.users
         console.log("first: " + users)

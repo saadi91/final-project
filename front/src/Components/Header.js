@@ -50,7 +50,7 @@ class Header extends Component {
 
   handleSubmit = evt => {
     evt.preventDefault();
-    axios.get("http://localhost:8888/").then(response => {
+    axios.get("http://localhost:4055/").then(response => {
       let loginUsers = response.data.users;
       
       for(var i=0; i < loginUsers.length; i++){
@@ -102,7 +102,7 @@ class Header extends Component {
       // console.log("with qs: " + qs.stringify(myData));
 
       axios
-        .post("http://localhost:8888/api/form", qs.stringify(myData))
+        .post("http://localhost:4055/api/form", qs.stringify(myData))
         .then(response => {
           //console.log("response: " + response.data);
         })
