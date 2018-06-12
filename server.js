@@ -24,7 +24,7 @@ next();
 };
 
 // NBA.stats.playerInfo({ PlayerID: curry.playerId }).then(console.log);
-// app.use(allowCrossDomain);
+app.use(allowCrossDomain);
 
 var db
 

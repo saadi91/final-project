@@ -185,7 +185,7 @@ const VoteOut = ({ team1, team2, onClick }) =>
           <DropdownButton pullRight
             bsStyle="primary"                
             bsSize="small"
-            title="Select league"
+            title="Select League"
             id="dropdown-size-small"
           >
             <MenuItem eventKey='1'onClick={this.showAll}>All</MenuItem>

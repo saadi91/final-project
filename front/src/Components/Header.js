@@ -52,19 +52,21 @@ class Header extends Component {
     evt.preventDefault();
     axios.get("http://localhost:8888/").then(response => {
       let loginUsers = response.data.users;
-
+      
+      for(var i=0; i < loginUsers.length; i++){
       if (
-        loginUsers.email !== this.state.email &&
-        loginUsers.password !== this.state.password
-      ) {
-        alert(
-          "the email address that you've entered doesn't match any account. Sign up for an account."
-        );
-        console.log(loginUsers.username);
+        loginUsers[i].email == this.state.email &&
+        loginUsers[i].password == this.state.password) {
+           this.setState({ isLogin: true, username:loginUsers[i].username });
+        }
+        // else {
+        //   alert("Invalid email or password");
+        //   return false;
+        // }
       }
+    
     });
-    this.setState({ isLogin: true });
-  };
+   };
 
   handleRegisterClose = () => {
     this.setState({ show: false });
@@ -149,7 +151,7 @@ class Header extends Component {
               pullRight
               bsStyle="primary"
               bsSize="small"
-              title="User"
+              title={this.state.username}
               id="dropdown-size-small"
             >
               <MenuItem eventKey="1">Your Profile</MenuItem>

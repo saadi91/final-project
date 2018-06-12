@@ -4,8 +4,6 @@ import Header from './Components/Header';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 class App extends Component {
- 
-  
   
   render() {
     return (
