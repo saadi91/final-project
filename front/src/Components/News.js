@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Page from "./Page";
 import "../pages-css/News.css";
-import {Button,Modal} from 'react-bootstrap'
+import {Button,Modal,Pagination} from 'react-bootstrap'
 
 //import { Button, Image, Item } from 'semantic-ui-react'
 
@@ -115,58 +115,54 @@ return (
 
   <div className="news-item">
   <div className="news-image">
-  <img src={require("../images/epa_basketball.jpg")}  alt="team-logo"/>
+  <img src={require("../images/news2.jpg")}  alt="team-logo"/>
   </div>
   <div className="news-title">
    <a href="#"><p> 	
-    Mavericks owner fined $600,000 for tanking comments </p></a> 
+   Curry out of Game One, but very likely for Game Two  </p></a> 
   </div>
   
   <div className="news-description">
-   <p>Dallas Mavericks owner Mark Cuban was
-   fined $600,000 for public statements detrimental to the NBA,
-   it was announced by NBA Commissioner Adam Silver on Wednesday. ...</p>
+   <p>Golden State Warriors sharpshooter Stephen Curry will sit out the second round playoff opener against New Orleans, but is “very likely” to play Game Two, coach Steve Kerr revealed before tip-off on Saturday.. ...</p>
   </div>
   </div>
 
   <div className="news-item">
   <div className="news-image">
-  <img src={require("../images/epa_basketball.jpg")}  alt="team-logo"/>
+  <img src={require("../images/news3.jpg")}  alt="team-logo"/>
   </div>
   <div className="news-title">
    <a href="#"><p> 	
-    Mavericks owner fined $600,000 for tanking comments </p></a> 
+   OKC's Westbrook fined but avoids suspension</p></a> 
   </div>
 
   <div className="news-description">
-   <p>Dallas Mavericks owner Mark Cuban was
-   fined $600,000 for public statements detrimental to the NBA,
-   it was announced by NBA Commissioner Adam Silver on Wednesday. ...</p>
+   <p>Oklahoma City's Russell Westbrook has been fined $10,000 over a confrontation with Utah’s Rudy Gobert in Game Four of their playoff series but the Thunder point guard will not be suspended. ...</p>
   </div>
   </div>
 
   <div className="news-item">
   <div className="news-image">
-  <img src={require("../images/epa_basketball.jpg")}  alt="team-logo"/>
+  <img src={require("../images/news4.jpg")}  alt="team-logo"/>
   </div>
   <div className="news-title">
    <a href="#"><p> 	
-    Mavericks owner fined $600,000 for tanking comments </p></a> 
+   Livid Embiid bemoans benching after Heat burns 76ers
+</p></a> 
   </div>
   <div className="news-description">
-   <p>Dallas Mavericks owner Mark Cuban was
-   fined $600,000 for public statements detrimental to the NBA,
-   it was announced by NBA Commissioner Adam Silver on Wednesday. ...</p>
+   <p>Philadelphia 76ers All-Star center Joel Embiid took to social media to voice his frustration at being left on the sidelines for his team's Eastern Conference first round Game Two playoff loss to the Miami Heat on Monday. ...</p>
   </div>
   </div>
 
   <div className="news-item">
   <div className="news-image">
-  <img src={require("../images/epa_basketball.jpg")}  alt="team-logo"/>
+  <img src={require("../images/news5.jpg")}  alt="team-logo"/>
   </div>
   <div className="news-title">
   <a href="#"><p> 	
-    Mavericks owner fined $600,000 for tanking comments </p></a> 
+  Warriors' Curry leaves game with knee injury
+ </p></a> 
   </div>
   <div className="news-description">
   <p>Dallas Mavericks owner Mark Cuban was
@@ -176,7 +172,15 @@ return (
   </div>
 
   </div> 
-  
+  <Pagination>
+  <Pagination.Prev />
+  <Pagination.Item active>{1}</Pagination.Item>
+  <Pagination.Item>{2}</Pagination.Item>
+  <Pagination.Item>{3}</Pagination.Item>
+  <Pagination.Item>{4}</Pagination.Item>
+  <Pagination.Ellipsis />
+  <Pagination.Next />
+</Pagination>;
 </Page>
  
 

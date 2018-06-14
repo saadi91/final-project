@@ -7,6 +7,11 @@ export default () => (
 <Page title="Contact Us" className="contact_us">
 
 <form className="form1" action="">
+
+{/* <div className=" row white-div ">
+                    <span id="headline" class="h1">Contact Us</span>
+                    <hr />
+                </div> */}
 			<label for="firstName" className="first-name">First Name</label>
 			<input className="form-group" type="text" />
 
@@ -24,6 +29,8 @@ export default () => (
 
 			<button className="form-button">Submit</button>
 		</form>
+		
+
 		</Page>
 );
 

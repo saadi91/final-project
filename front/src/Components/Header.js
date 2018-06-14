@@ -2,15 +2,8 @@ import React, { Component } from "react";
 import qs from "qs";
 import axios from "axios";
 import {
-  Button,
-  Modal,
-  FormGroup,
-  ControlLabel,
-  Form,
-  FormControl,
-  MenuItem,
-  ButtonToolbar,
-  DropdownButton
+  Button,Modal,FormGroup,ControlLabel,Form,FormControl,MenuItem,
+  ButtonToolbar,DropdownButton,Col,Checkbox, FieldGroup ,HelpBlock
 } from "react-bootstrap";
 import "../pages-css/Header.css";
 
@@ -59,14 +52,11 @@ class Header extends Component {
         loginUsers[i].password == this.state.password) {
            this.setState({ isLogin: true, username:loginUsers[i].username });
         }
-        // else {
-        //   alert("Invalid email or password");
-        //   return false;
-        // }
+      
       }
-    
     });
-   };
+   
+};
 
   handleRegisterClose = () => {
     this.setState({ show: false });
@@ -114,6 +104,7 @@ class Header extends Component {
   showLoginLogout() {
     if (!this.state.isLogin) {
       return (
+        <div>
         <Form className="login-form" onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="small">
             <ControlLabel>Email</ControlLabel>
@@ -123,6 +114,7 @@ class Header extends Component {
               value={this.state.email}
               onChange={this.handleChange}
             />
+            
           </FormGroup>
 
           <FormGroup controlId="password" bsSize="small">
@@ -132,7 +124,12 @@ class Header extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-          </FormGroup>
+
+      </FormGroup>
+      
+      <div className="forgot-password">
+            <a href="#">Forgot password?</a>
+            </div>
           <div className="login-buttons">
             <Button bsStyle="primary" onClick={this.handleRegisterShow}>
               Register
@@ -142,6 +139,8 @@ class Header extends Component {
             </Button>
           </div>
         </Form>
+        
+        </div>
       );
     } else {
       return (
@@ -169,7 +168,7 @@ class Header extends Component {
   render() {
     /*     const show = this.state.show
      */
-
+  
     return (
       <div className="container">
         <header>
@@ -220,6 +219,7 @@ class Header extends Component {
                       onChange={this.handleChangeRegister}
                     />
                   </FormGroup>
+             
                 </Form>
               </Modal.Body>
 
@@ -229,7 +229,7 @@ class Header extends Component {
                   type="submit"
                   bsStyle="primary"
                   onClick={this.addRegisterUser}
-                >
+                 >
                   Register
                 </Button>
               </Modal.Footer>

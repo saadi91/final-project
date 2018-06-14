@@ -53,5 +53,12 @@ header {
       border-radius: 50%;
   }
 
- 
+  .forgot-password  {
+   position: relative;
+   left: 7px;
+   top: -8px;
+   color: #377696;
+ }
   
+ .forgot-password a:hover {
+  text-decoration: none; }

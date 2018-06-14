@@ -48,17 +48,18 @@ const league = ( title, image, ...matches) => {
 const leagues = 
  [
   league('Lebanese Basketball Federation','lebanese-basketball-federation.jpg',
-    match('6:00','byblos','AlRiyadi'),
-    match('6:00','byblos','AlRiyadi')
+    match('6:00','Champville','AlRiyadi'),
+    match('6:00','Byblos','Tadamon')
   ),
   league('National Basketball Association','nba.png',
     match('8:00','Minnesota','Denver'),
-    match('8:00','Minnesota','Denver')
+    match('8:00','Warriors','Boston'),
+    match('8:00','Los Angeles','Cavaliers')
   ),
   league('Euro League','euro-league.jpg',
   match('6:00','Fenerbahce','zalgiris'),
-  match('6:00','Fenerbahce','zalgiris'),
-  match('6:00','Fenerbahce','zalgiris')
+  match('6:00','CSKA','FC Barcelona'),
+  match('6:00','KK Partizan','Olympiakos')
 )
 ]
 
@@ -105,7 +106,8 @@ const VoteOut = ({ team1, team2, onClick }) =>
       team1:{},
       team2:{} ,
       lebaneseFilter:'',
-      nbaFilter:''
+      nbaFilter:'',
+      showDoneVoted: false
     }
   }
   // open the model when click vote-btn
@@ -114,7 +116,7 @@ const VoteOut = ({ team1, team2, onClick }) =>
   }
   // close the model and return values to null
   voteUserOut = () => {
-    this.setState({ isVote: false,inputValue: '',inputValue2: '' })
+    this.setState({ isVote: false,showDoneVoted: true,inputValue: '',inputValue2: '' })
     
   }
   //contain a first value that user inputted
@@ -135,6 +137,9 @@ const VoteOut = ({ team1, team2, onClick }) =>
   }
   showAll = () => {
     this.setState({lebaneseFilter:'', nbaFilter:''})
+  }
+  closeVoted = () => {
+    this.setState({showDoneVoted: false})
   }
   renderLeagues = () => {
     const lbf = this.state.lebaneseFilter
@@ -198,9 +203,7 @@ const VoteOut = ({ team1, team2, onClick }) =>
  
         <div>
         <div className="matches">
-         
           {this.renderLeagues()}
-
         </div>
       <div className="vote-modal">
         <Modal show={this.state.isVote} onHide={this.voteUserOut}>
@@ -236,7 +239,18 @@ const VoteOut = ({ team1, team2, onClick }) =>
           </Modal.Footer>
         </Modal>
         </div>
+ <Modal show={this.state.showDoneVoted} onHide={this.closeVoted}>
+              <Modal.Header closeButton>
+                <Modal.Title></Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+              <Modal.Title>Great, Your vote has been submited</Modal.Title>
+              </Modal.Body>
 
+              <Modal.Footer>
+                <Button bsStyle="primary" onClick={this.closeVoted}>OK</Button>
+              </Modal.Footer>
+            </Modal>
       </div>
 </div>
     )

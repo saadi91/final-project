@@ -35,6 +35,7 @@ MongoClient.connect('mongodb://basketball:saleh123@ds143070.mlab.com:43070/baske
         return err
     }
     db = database
+
     app.listen(PORT, () => {
         console.log(`server listening on port ${PORT}`)
     })
@@ -52,7 +53,7 @@ app.all('/api/form', (req, res) => {
 
 app.all('/', (req, res) =>{
     db.collection('basketball-fun-now').find().toArray(function(err, results) {
-        console.log(results)
+        // console.log(results)
       res.send({users: results})
     })
 })
