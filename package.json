@@ -7,17 +7,22 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "cd back && npm start",
     "client": "cd front && npm start",
-    "start": "concurrently --kill-others-on-fail --names \"server client\" \"npm run server\" \"npm run client\""  },
+    "back": "cd back && npm install",
+    "front": "cd front && npm install",
+    "start": "concurrently --kill-others-on-fail --names \" server client \" \"npm run server\" \"npm run client\" ",
+    "install": "concurrently --kill-others-on-fail --names \" front back \" \"npm run front\" \"npm run back\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadi91/final-project.git"
+  },
   "author": "",
-  "dependencies": {
   "license": "ISC",
-    "body-parser": "^1.18.3",
-    "concurrently": "^3.5.1",
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "mongodb": "^2.2.33",
-    "nba": "^4.2.2",
-    "nodemon": "^1.17.5",
-    "react-bootstrap": "^0.32.1"
+  "bugs": {
+    "url": "https://github.com/saadi91/final-project/issues"
+  },
+  
+  "dependencies": {
+ "concurrently": "^3.5.1"
   }
 }

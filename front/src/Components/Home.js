@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Page from "./Page";
+import "../pages-css/Home.css"
 import LeaguesMatches from './LeaguesMatches';
 import Result from './Result';
 

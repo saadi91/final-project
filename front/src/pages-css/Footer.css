@@ -13,6 +13,9 @@
     display: grid;
     color: #f8f9fa;
   }
+  .copy-right p {
+    font-size: 18px;
+  }
 
   .social-media-icons {
     display: grid;

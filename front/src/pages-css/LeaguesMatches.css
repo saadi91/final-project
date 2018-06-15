@@ -1,7 +1,7 @@
 
 .Select-League{
     text-align: center;
-    margin: 7% 30%;
+    margin: 5% 30%;
     }
     .Select-League .btn {
         background: #377696;
@@ -64,7 +64,9 @@ justify-items: center;
 .item {
     display: grid;
     justify-content: center;
-    align-content: center;    
+    align-content: center;   
+    font-weight: bold;
+     
 }
 
 

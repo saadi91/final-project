@@ -175,7 +175,7 @@ class Header extends Component {
           <div>
             <img className="logo" src={require("../logo.jpg")} alt="logo" />
           </div>
-
+          
           <div className="login">
             {this.showLoginLogout()}
 

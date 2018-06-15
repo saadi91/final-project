@@ -13,11 +13,9 @@ class Result extends Component {
   }
 
   componentDidMount() {
-    console.log("test")
     axios.get('http://localhost:4055/')
       .then(response => {
         const users = response.data.users
-        console.log("first: " + users)
         this.setState({ users });
       })
   }
@@ -27,18 +25,33 @@ class Result extends Component {
       
       <div className="result-table">
       <table>
+        <tbody>
       <tr>
       <th>User Name</th>
       <th>Points</th>
       </tr>
-        
+      <tr>
+        <td>samer</td>
+        <td>15</td>
+          </tr>
+          <tr>
+        <td>jad</td>
+        <td>10</td>
+          </tr>
+          <tr>
+        <td>ali</td>
+        <td>5</td>
+          </tr>
+          
         { this.state.users.map(user => 
         
-          <tr>
+        <tr>
         <td>{user.username}</td>
         <td>{user.points}</td>
-          </tr>
+        </tr>
         )}
+         
+         </tbody>
         </table>
         </div>
        

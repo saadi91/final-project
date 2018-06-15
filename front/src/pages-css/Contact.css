@@ -11,7 +11,10 @@
   display: block;
  text-align: center;
 } */
-
+/* .contact-title {
+  text-align: left; 
+  padding: 5%;
+} */
 .form1 {
     display: grid;
     padding: 1em;
