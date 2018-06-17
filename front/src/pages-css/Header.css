@@ -2,20 +2,37 @@ header {
     position: relative;
      padding: 25px;
      width: 100%;
-    height: 220px;
+    height: 500px;
     margin: 0px;
-    background: #D2EDE6;
-
+    /* background: #D2EDE6; */
+    background-image: url("../images/basketball-player.jpg");
+ 
   }
-
+header .description{
+  width: 85%;
+  position: relative;
+  top: 45%;
+  text-align: center;
+}
+header .description h4{
+font-size: 30px;
+color: #ffffff;
+font-family: 'Serif';
+font-weight: bold;
+/* font-style: oblique; */
+}
   .login {
     position: absolute;
     top: 0px;
     right: 0px;
   }
-
+  .login .login-info {
+    color: rgb(249, 249, 250);
+    font-size: 18px;
+  }
   header .logo {
     float: left;
+    margin-left: 3%;
   }
   
   header form {
@@ -25,8 +42,14 @@ header {
   
   header form a {
     text-decoration: none;
-    margin: 5px;
+    position: relative;
+    top: 20px;
+    right: 90px;
+    float: right;
     font-family: sans-serif,Helvetica,Arial;
+    font-size: 17px;
+    color: rgb(1, 26, 255);
+    font-weight: 900px;
   }
   
   .login .form-group{
@@ -43,6 +66,7 @@ header {
   
   .login-btn {
     background: rgb(212, 45, 33);
+    font-size: 16px;
     color: white;
   }
   header .user-info {

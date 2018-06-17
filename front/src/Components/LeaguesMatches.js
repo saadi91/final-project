@@ -48,18 +48,18 @@ const league = ( title, image, ...matches) => {
 const leagues = 
  [
   league('Lebanese Basketball Federation','lebanese-basketball-federation.jpg',
-    match('6:00','Champville','AlRiyadi'),
-    match('6:00','Byblos','Tadamon')
+    match('6:00 PM','Champville','AlRiyadi'),
+    match('9:30 PM','Byblos','Tadamon')
   ),
   league('National Basketball Association','nba.png',
-    match('8:00','Minnesota','Denver'),
-    match('8:00','Warriors','Boston'),
-    match('8:00','Los Angeles','Cavaliers')
+    match('3:00 PM','Minnesota','Denver'),
+    match('5:00 PM','Warriors','Boston'),
+    match('8:00 PM','Los Angeles','Cavaliers')
   ),
   league('Euro League','euro-league.jpg',
-  match('6:00','Fenerbahce','zalgiris'),
-  match('6:00','CSKA','FC Barcelona'),
-  match('6:00','KK Partizan','Olympiakos')
+  match('2:30 PM','Fenerbahce','zalgiris'),
+  match('7:15 PM','CSKA','FC Barcelona'),
+  match('10:00 PM','KK Partizan','Olympiakos')
 )
 ]
 

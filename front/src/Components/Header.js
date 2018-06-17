@@ -107,7 +107,7 @@ class Header extends Component {
         <div>
         <Form className="login-form" onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="small">
-            <ControlLabel>Email</ControlLabel>
+            <ControlLabel className="login-info">Email</ControlLabel>
             <FormControl
               autoFocus
               type="email"
@@ -118,7 +118,7 @@ class Header extends Component {
           </FormGroup>
 
           <FormGroup controlId="password" bsSize="small">
-            <ControlLabel>Password</ControlLabel>
+            <ControlLabel className="login-info">Password</ControlLabel>
             <FormControl
               type="password"
               value={this.state.password}
@@ -175,7 +175,11 @@ class Header extends Component {
           <div>
             <img className="logo" src={require("../logo.jpg")} alt="logo" />
           </div>
-          
+          <div className="description">
+            <h4>Challenge with your friends</h4>
+            <h4>Prove that you have deep look at basketball world</h4>
+            <h4>Expect the winning team and gather points to get prizes</h4>
+          </div>
           <div className="login">
             {this.showLoginLogout()}
 
