@@ -93,6 +93,16 @@ justify-items: center;
      margin: 0px 5px;
  }
 
+ .modal-title {
+     text-align: center;
+ }
+  .check-circle {
+    width: 70px;
+    height: auto;
+    margin-left: 43%;
+    
+ } 
+
 
 /* @media (max-width: 900px) {
     .matches {

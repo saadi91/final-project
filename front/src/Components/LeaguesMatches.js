@@ -212,20 +212,20 @@ const VoteOut = ({ team1, team2, onClick }) =>
           </Modal.Header>
           <Modal.Body>
             <label>from:</label>
-            <input min="2" type="number" onChange={this.startValue} value={a|0} 
+            <input min="2" type="number" onChange={this.startValue} value={a} 
             name="first-number" className="number">
             </input>
             <label>to:</label>
 
 
-            <input min="2" type="number"  value={a + 30|0} name="second-number" className="number"></input>
+            <input min="2" type="number"  value={a + 30} name="second-number" className="number"></input>
             <img className="logo-club" src={this.state.team1.image} alt="club" />
             <span>V</span>
             <img className="logo-club" src={this.state.team2.image} alt="club" />
             <label>from:</label>
-            <input min="2" type="number" onChange={this.startValue2} value={b|0} name="first-number" className="number"></input>
+            <input min="2" type="number" onChange={this.startValue2} value={b} name="first-number" className="number"></input>
             <label>to:</label>
-            <input min="2" type="number"  value={b + 30|0} name="second-number" className="number"></input>
+            <input min="2" type="number"  value={b + 30} name="second-number" className="number"></input>
             <FormControl componentClass="select" placeholder="select" className="winer-team">
               <option value="select">Select</option>
               <option value="other">{this.state.team1.name}</option>
@@ -244,6 +244,7 @@ const VoteOut = ({ team1, team2, onClick }) =>
                 <Modal.Title></Modal.Title>
               </Modal.Header>
               <Modal.Body>
+              <img src={require("../images/ok.png")} class="check-circle"></img> 
               <Modal.Title>Great, Your vote has been submited</Modal.Title>
               </Modal.Body>
 
